@@ -36,8 +36,8 @@ var recipes = [
         "image": "img2"
         }
     ],
-    "image": "https://tocook-nodeserver.herokuapp.com/img/fideua.jpg",
-    "icon": "https://tocook-nodeserver.herokuapp.com/img/arroz_icon.jpg"
+    "image": "img/fideua.jpg",
+    "icon": "img/arroz_icon.jpg"
     },
     
     {
@@ -77,8 +77,8 @@ var recipes = [
         "image": "img2"
         }
     ],
-        "image": "https://tocook-nodeserver.herokuapp.com/img/carbonara.jpg",
-        "icon": "https://tocook-nodeserver.herokuapp.com/img/pasta_icon.jpg"
+        "image": "img/carbonara.jpg",
+        "icon": "img/pasta_icon.jpg"
     },
     
     {
@@ -118,8 +118,8 @@ var recipes = [
         "image": "img2"
         }
     ],    
-        "image": "https://tocook-nodeserver.herokuapp.com/img/fideua.jpg",
-        "icon": "https://tocook-nodeserver.herokuapp.com/img/arroz_icon.jpg"
+        "image": "img/fideua.jpg",
+        "icon": "img/arroz_icon.jpg"
     }
 ];
 
