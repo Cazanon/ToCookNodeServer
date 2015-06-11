@@ -78,7 +78,7 @@ var recipes = [
         }
     ],
         "image": "img/carbonara.jpg",
-        "icon": "img/pasta_icon.jpg"
+        "icon": "img/pasta_icon.png"
     },
     
     {
