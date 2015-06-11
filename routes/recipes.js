@@ -36,13 +36,13 @@ var recipes = [
         "image": "img2"
         }
     ],
-    "image": "../img/fideua.jpg",
-    "icon": "../img/arroz_icon.jpg"
+    "image": "https://tocook-nodeserver.herokuapp.com/img/fideua.jpg",
+    "icon": "https://tocook-nodeserver.herokuapp.com/img/arroz_icon.jpg"
     },
     
     {
     "id":1,
-    "name": "Paella Mixta",
+    "name": "Espaguettis",
     "subname": "Arroz con verduras y pollo todo muy rico!",
     "category": "Arroces",
     "ingredients": [
@@ -77,13 +77,13 @@ var recipes = [
         "image": "img2"
         }
     ],
-        "image": "../img/fideua.jpg",
-        "icon": "../img/arroz_icon.jpg"
+        "image": "https://tocook-nodeserver.herokuapp.com/img/carbonara.jpg",
+        "icon": "https://tocook-nodeserver.herokuapp.com/img/pasta_icon.jpg"
     },
     
     {
     "id":2,
-    "name": "Paella Mixta",
+    "name": "Bizcocho",
     "subname": "Arroz con verduras y pollo todo muy rico!",
     "category": "Arroces",
     "ingredients": [
@@ -118,8 +118,8 @@ var recipes = [
         "image": "img2"
         }
     ],    
-        "image": "../img/fideua.jpg",
-        "icon": "../img/arroz_icon.jpg"
+        "image": "https://tocook-nodeserver.herokuapp.com/img/fideua.jpg",
+        "icon": "https://tocook-nodeserver.herokuapp.com/img/arroz_icon.jpg"
     }
 ];
 
