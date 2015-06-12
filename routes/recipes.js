@@ -58,7 +58,7 @@ var recipes = [
 		"details": "Laminado"
 		}
     ],        
-    "step": [
+    "steps": [
         {
         "number": 1,
         "sumary":"Preparar los ingredientes",
@@ -139,7 +139,7 @@ var recipes = [
 		"details": "Solo la yema batida"
 		}
     ],        
-    "step": [
+    "steps": [
         {
         "number": 1,
         "sumary":"Preparar los ingredientes",
@@ -240,7 +240,7 @@ var recipes = [
 		"details": "Laminado"
 		}
     ],        
-    "step": [
+    "steps": [
         {
         "number": 1,
         "sumary":"Preparar los ingredientes",
@@ -284,9 +284,9 @@ var recipes = [
 },
 {
     "id":3,
-    "name": "Solomillo al horno",
+    "name": "Bizcocho 1-2-3",
     "subname": "Paella mixta de verduras, pollo y marisco.",
-    "category": "Carnes",
+    "category": "Postres",
     "people": "4",
     "ingredients": [
         {
@@ -341,7 +341,7 @@ var recipes = [
 		"details": "Laminado"
 		}
     ],        
-    "step": [
+    "steps": [
         {
         "number": 1,
         "sumary":"Preparar los ingredientes",
