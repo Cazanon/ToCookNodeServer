@@ -18,7 +18,7 @@ app.all('*', function(req, res, next) {
 });
 
 app.get('/recipes', recipes.findAll);
-app.get('/recipes/:category/category', recipes.findByCategory);
+app.get('/recipes/category/:category', recipes.findByCategory);
 app.get('/recipes/:id', recipes.findById);
 app.get('/recipes/:name', recipes.findByName);
 
