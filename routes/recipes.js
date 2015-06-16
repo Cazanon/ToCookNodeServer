@@ -403,7 +403,14 @@ exports.findByName = function (req, res, next){
 	}
 };
 
-exports.findCategoryById = function (req, res, next){
+exports.findByCategory = function (req, res, next){
     console.log('Peticion en funcion de la categoria');
-	res.send(recipes[0]);
+	var category =req.params.category;
+	var recipesCategory = [];
+	for(var i=0; i<recipes.length; i++){
+		if(category == recipes[i].category){
+			recipesCategory.push(recipes[i]);			
+		}
+	}
+	res.send(recipesCategory);
 };
