@@ -20,7 +20,7 @@ app.all('*', function(req, res, next) {
 app.get('/recipes', recipes.findAll);
 app.get('/recipes/:id', recipes.findById);
 app.get('/recipes/:name', recipes.findByName);
-app.get('/recipes/:category', recipes.findByCategory);
+app.get('/recipes/category/:category', recipes.findByCategory);
 
 app.set('port', process.env.PORT || 5000);
 

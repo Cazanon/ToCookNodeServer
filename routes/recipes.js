@@ -405,7 +405,7 @@ exports.findByName = function (req, res, next){
 
 exports.findByCategory = function (req, res, next){
     console.log('Peticion en funcion de la categoria');
-	var category =req.params.category;
+	var category = req.params.category;
 	var recipesCategory = [];
 	for(var i=0; i<recipes.length; i++){
 		if(category == recipes[i].category){
