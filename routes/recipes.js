@@ -3,7 +3,7 @@ var recipes = [
     "id":0,
     "name": "Paella Mixta",
     "subname": "Paella mixta de verduras, pollo y marisco",
-    "category": "Arroces",
+    "category": categories[0],
     "people": "4",
     "ingredients": [
         {
@@ -104,7 +104,7 @@ var recipes = [
     "id":1,
     "name": "Espaguetis carbonara",
     "subname": "Pasta con salsa carbonara",
-    "category": "Pasta",
+    "category": categories[1],
     "people": "4",
     "ingredients": [
         {
@@ -185,7 +185,7 @@ var recipes = [
     "id":2,
     "name": "Solomillo al horno",
     "subname": "Paella mixta de verduras, pollo y marisco.",
-    "category": "Carne",
+    "category": categories[2],
     "people": "4",
     "ingredients": [
         {
@@ -286,7 +286,7 @@ var recipes = [
     "id":3,
     "name": "Bizcocho 1-2-3",
     "subname": "Paella mixta de verduras, pollo y marisco.",
-    "category": "Postres",
+    "category": categories[4],
     "people": "4",
     "ingredients": [
         {
@@ -418,4 +418,4 @@ exports.findByCategory = function (req, res, next){
 exports.findAllCategories = function (req, res, next){
 	console.log('Find All Categories');
     res.send(categories);
-}
+};
