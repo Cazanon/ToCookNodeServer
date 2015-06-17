@@ -4,11 +4,23 @@ var express = require('express'),
 	recipes 		= require('./routes/recipes'),
     app = express();
 
+//Database
+var mongo = require('mongodb');
+var monk = require('monk');
+var db = monk('ds049219.mongolab.com:49219/tocookdb');
+app.use(function(req,res,next){
+    req.db = db;
+    next();
+});
+
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(methodOverride());      // simulate DELETE and PUT
+
+
 
 // CORS (Cross-Origin Resource Sharing) headers to support Cross-site HTTP requests
 app.all('*', function(req, res, next) {
