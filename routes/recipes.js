@@ -3,7 +3,7 @@ var recipes = [
     "id":0,
     "name": "Paella Mixta",
     "subname": "Paella mixta de verduras, pollo y marisco",
-    "category": categories[0],
+    "category": "Arroces",
     "people": "4",
     "ingredients": [
         {
