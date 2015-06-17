@@ -3,7 +3,7 @@ var recipes = [
     "id":0,
     "name": "Paella Mixta",
     "subname": "Paella mixta de verduras, pollo y marisco",
-    "category": "Arroces",
+    "category": categories[0],
     "people": "4",
     "ingredients": [
         {
@@ -389,7 +389,7 @@ var categories = [{"id":0,"name":"Arroces"},
                   {"id":1,"name":"Pasta"},
                   {"id":2,"name":"Carne"},
                   {"id":3,"name":"Pescado"},
-                  {"id":4,"name":"Postres"},
+                  {"id":4,"name":"Postres"}
                  ];
 
 exports.findAll = function (req, res, next) {
