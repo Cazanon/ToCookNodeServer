@@ -104,7 +104,7 @@ var recipes = [
     "id":1,
     "name": "Espaguetis carbonara",
     "subname": "Pasta con salsa carbonara",
-    "category": "Pastas",
+    "category": "Pasta",
     "people": "4",
     "ingredients": [
         {
@@ -185,7 +185,7 @@ var recipes = [
     "id":2,
     "name": "Solomillo al horno",
     "subname": "Paella mixta de verduras, pollo y marisco.",
-    "category": "Carnes",
+    "category": "Carne",
     "people": "4",
     "ingredients": [
         {
