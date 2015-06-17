@@ -3,7 +3,7 @@ var recipes = [
     "id":0,
     "name": "Paella Mixta",
     "subname": "Paella mixta de verduras, pollo y marisco",
-    "category": "Arroces",
+    "category": categories[0],
     "people": "4",
     "ingredients": [
         {
@@ -104,7 +104,7 @@ var recipes = [
     "id":1,
     "name": "Espaguetis carbonara",
     "subname": "Pasta con salsa carbonara",
-    "category": "Pastas",
+    "category": categories[1],
     "people": "4",
     "ingredients": [
         {
@@ -185,7 +185,7 @@ var recipes = [
     "id":2,
     "name": "Solomillo al horno",
     "subname": "Paella mixta de verduras, pollo y marisco.",
-    "category": "Carnes",
+    "category": categories[2],
     "people": "4",
     "ingredients": [
         {
@@ -286,7 +286,7 @@ var recipes = [
     "id":3,
     "name": "Bizcocho 1-2-3",
     "subname": "Paella mixta de verduras, pollo y marisco.",
-    "category": "Postres",
+    "category": categories[4],
     "people": "4",
     "ingredients": [
         {
@@ -385,26 +385,26 @@ var recipes = [
 }
 ];
 
+var categories = [{"id":0,"name":"Arroces"},
+                  {"id":1,"name":"Pasta"},
+                  {"id":2,"name":"Carne"},
+                  {"id":3,"name":"Pescado"},
+                  {"id":4,"name":"Postres"},
+                 ];
+
 exports.findAll = function (req, res, next) {
+	console.log('Find All Recipes');
     res.send(recipes);
 };
 
-exports.findById = function (req, res, next) {
+exports.findById = function (req, res, next) {ç
+	console.log('Find Recipe by Id');
     var id = req.params.id;
     res.send(recipes[id]);
 };
 
-exports.findByName = function (req, res, next){
-	var name =req.params.name;
-	for(var i=0; i<recipes.length; i++){
-		if(name == recipes[i].name){
-			res.send(recipes[i]);
-		}
-	}
-};
-
 exports.findByCategory = function (req, res, next){
-    console.log('Peticion en funcion de la categoria');
+    console.log('Find Recipes by Category');
 	var category = req.params.category;
 	var recipesCategory = [];
 	for(var i=0; i<recipes.length; i++){
@@ -414,3 +414,8 @@ exports.findByCategory = function (req, res, next){
 	}
 	res.send(recipesCategory);
 };
+
+exports.findAllCategories = function (req, res, next){
+	console.log('Find All Categories');
+    res.send(categories);
+}
