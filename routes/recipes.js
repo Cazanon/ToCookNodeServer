@@ -3,7 +3,7 @@ var recipes = [
     "id":0,
     "name": "Paella Mixta",
     "subname": "Paella mixta de verduras, pollo y marisco",
-    "category": "Arroces",
+    "category": categories[0],
     "people": "4",
     "ingredients": [
         {
@@ -397,13 +397,13 @@ exports.findAll = function (req, res, next) {
     res.send(recipes);
 };
 
-exports.findById = function (req, res, next) {ç
+exports.findById = function (req, res, next) {
 	console.log('Find Recipe by Id');
     var id = req.params.id;
     res.send(recipes[id]);
 };
 
-exports.findByCategory = function (req, res, next){
+exports.findByCategory = function (req, res, next) {
     console.log('Find Recipes by Category');
 	var category = req.params.category;
 	var recipesCategory = [];
@@ -415,7 +415,7 @@ exports.findByCategory = function (req, res, next){
 	res.send(recipesCategory);
 };
 
-exports.findAllCategories = function (req, res, next){
+exports.findAllCategories = function (req, res, next) {
 	console.log('Find All Categories');
     res.send(categories);
 };
