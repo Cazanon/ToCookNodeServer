@@ -3,7 +3,7 @@ var recipes = [
     "id":0,
     "name": "Paella Mixta",
     "subname": "Paella mixta de verduras, pollo y marisco",
-    "category": categories[0],
+    "category": "Arroces",
     "people": "4",
     "ingredients": [
         {
@@ -104,7 +104,7 @@ var recipes = [
     "id":1,
     "name": "Espaguetis carbonara",
     "subname": "Pasta con salsa carbonara",
-    "category": categories[1],
+    "category": "Pastas",
     "people": "4",
     "ingredients": [
         {
@@ -185,7 +185,7 @@ var recipes = [
     "id":2,
     "name": "Solomillo al horno",
     "subname": "Paella mixta de verduras, pollo y marisco.",
-    "category": categories[2],
+    "category": "Carnes",
     "people": "4",
     "ingredients": [
         {
@@ -286,7 +286,7 @@ var recipes = [
     "id":3,
     "name": "Bizcocho 1-2-3",
     "subname": "Paella mixta de verduras, pollo y marisco.",
-    "category": categories[4],
+    "category": "Postres",
     "people": "4",
     "ingredients": [
         {
