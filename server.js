@@ -2,25 +2,18 @@ var express = require('express'),
     bodyParser      = require('body-parser'),
     methodOverride  = require('method-override'),
 	recipes 		= require('./routes/recipes'),
+	//mongoose 		= require('mongoose'),
     app = express();
 
-//Database
-var mongo = require('mongodb');
-var monk = require('monk');
-var db = monk('ds049219.mongolab.com:49219/tocookdb');
-app.use(function(req,res,next){
-    req.db = db;
-    next();
-});
-
+//error bson:
+//http://stackoverflow.com/questions/28651028/cannot-find-module-build-release-bson-code-module-not-found-js-bson
+//mongoose.connect('mongodb://tocook:ionictocook@ds049219.mongolab.com:49219/tocookdb');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(methodOverride());      // simulate DELETE and PUT
-
-
 
 // CORS (Cross-Origin Resource Sharing) headers to support Cross-site HTTP requests
 app.all('*', function(req, res, next) {
