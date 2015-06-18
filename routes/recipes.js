@@ -435,7 +435,7 @@ exports.findByFavList = function (req, res, next) {
 			}
 		}
 	}
-	res.send(recipesFavList);
+	res.send(recipes);
 };
 
 exports.findAllFavList = function (req, res, next) {
