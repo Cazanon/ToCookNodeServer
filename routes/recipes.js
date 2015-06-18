@@ -392,6 +392,10 @@ var categories = [{"id":0,"name":"Arroces"},
                   {"id":4,"name":"Postres"}
                  ];
 
+var favList = [{"id":0,"name":"Diario"},
+               {"id":1,"name":"Fines de semana"}
+              ];
+
 exports.findAll = function (req, res, next) {
 	console.log('Find All Recipes');
     res.send(recipes);
@@ -418,4 +422,23 @@ exports.findByCategory = function (req, res, next) {
 exports.findAllCategories = function (req, res, next) {
 	console.log('Find All Categories');
     res.send(categories);
+};
+
+exports.findByFavList = function (req, res, next) {
+    console.log('Find Recipes by FavList');
+	var favList = req.params.favList;
+	var recipesFavList = [];
+	for(var i=0; i<recipes.length; i++){
+		for(var j=0; j<recipes[i].favourite.length; j++){
+			if(favList == recipes[i].favourite.favList){
+				recipesFavList.push(recipes[i]);			
+			}
+		}
+	}
+	res.send(recipesFavList);
+};
+
+exports.findAllFavList = function (req, res, next) {
+	console.log('Find All FavList');
+    res.send(favList);
 };

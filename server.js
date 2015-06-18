@@ -23,8 +23,13 @@ app.all('*', function(req, res, next) {
 });
 
 app.get('/recipes', recipes.findAll);
+
 app.get('/recipes/category/:category', recipes.findByCategory);
 app.get('/recipes/categories', recipes.findAllCategories);
+
+app.get('/recipes/favourite/:favList', recipes.findByFavList);
+app.get('/recipes/favourites', recipes.findAllFavList);
+
 app.get('/recipes/:id', recipes.findById);
 
 
