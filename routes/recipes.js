@@ -96,7 +96,7 @@ var recipes = [
         {
         "favList": "Diario"
         }, {
-        "favList": "Fines de semana"
+        "favList": "Especial"
         }
     ]
 },
@@ -177,7 +177,7 @@ var recipes = [
         {
         "favList": "Diario"
         }, {
-        "favList": "Fines de semana"
+        "favList": "Especial"
         }
     ]
 },
@@ -278,7 +278,7 @@ var recipes = [
         {
         "favList": "Diario"
         }, {
-        "favList": "Fines de semana"
+        "favList": "Especial"
         }
     ]
 },
@@ -379,7 +379,7 @@ var recipes = [
         {
         "favList": "Diario"
         }, {
-        "favList": "Fines de semana"
+        "favList": "Especial"
         }
     ]
 }
@@ -393,7 +393,7 @@ var categories = [{"id":0,"name":"Arroces"},
                  ];
 
 var favList = [{"id":0,"name":"Diario"},
-               {"id":1,"name":"Fines de semana"}
+               {"id":1,"name":"Especial"}
               ];
 
 exports.findAll = function (req, res, next) {
@@ -435,7 +435,7 @@ exports.findByFavList = function (req, res, next) {
 			}
 		}
 	}
-	res.send(recipes);
+	res.send(recipesFavList);
 };
 
 exports.findAllFavList = function (req, res, next) {
