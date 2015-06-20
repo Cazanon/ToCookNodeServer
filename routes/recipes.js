@@ -398,6 +398,9 @@ var favList = [{"id":0,"name":"Diario"},
 
 exports.findAll = function (req, res, next) {
 	console.log('Find All Recipes');
+	/*mongoose.connection.db.collection('recipes', function (err, collection) {
+	    collection.find();
+	});*/
     res.send(recipes);
 };
 
@@ -406,6 +409,7 @@ exports.findById = function (req, res, next) {
     var id = req.params.id;
     res.send(recipes[id]);
 };
+
 
 exports.findByCategory = function (req, res, next) {
     console.log('Find Recipes by Category');

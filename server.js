@@ -1,26 +1,28 @@
-var express = require('express'),
+var express 		= require('express'),
     bodyParser      = require('body-parser'),
     methodOverride  = require('method-override'),
+    cors 			= require('cors');
 	recipes 		= require('./routes/recipes'),
-	//mongoose 		= require('mongoose'),
+	mongoose 		= require('mongoose'),
     app = express();
 
 //error bson:
 //http://stackoverflow.com/questions/28651028/cannot-find-module-build-release-bson-code-module-not-found-js-bson
-//mongoose.connect('mongodb://tocook:ionictocook@ds049219.mongolab.com:49219/tocookdb');
+mongoose.connect('mongodb://tocook:ionictocook@ds049219.mongolab.com:49219/tocookdb');
 
+app.use(express.static('public'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-app.use(methodOverride());      // simulate DELETE and PUT
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(methodOverride());      
+app.use(cors());
 
-// CORS (Cross-Origin Resource Sharing) headers to support Cross-site HTTP requests
-app.all('*', function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    next();
+/*middleware example:
+ * 
+ * app.use(function(req, req, next) {
+	// hacer y terminar
+	// hacer y delegar (next();)
 });
+*/
 
 app.get('/recipes', recipes.findAll);
 
@@ -37,4 +39,18 @@ app.set('port', process.env.PORT || 5000);
 
 app.listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
+});
+
+/*
+{
+	status: 200,
+	data: {...},
+	error: {}
+}
+*/
+
+app.use(function(err, req, res, next){
+	res.json({
+		status: 504
+	});
 });
