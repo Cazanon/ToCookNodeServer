@@ -47,13 +47,13 @@ exports.findByCategory = function (req, res, next) {
 
 exports.findAllFavList = function (req, res, next) {
 	console.log('Find All FavLists');
-	db.FavList.find().lean().sort('name').exec(function(err, favLists){
+	db.FavList.find().lean().sort('name').exec(function(err, favList){
 		  if(err) return console.error(err);
-		  console.log(favLists.length + ' favList found');
-		  favLists = favLists.map(function(favList){
+		  console.log(favList.length + ' favList found');
+		  favList = favList.map(function(favList){
 			  return favList;
 	      });
-		  res.send(favLists);
+		  res.send(favList);
 	});
 };
 
