@@ -1305,12 +1305,22 @@ var favList = [{"id":0,"name":"Diario"},
                {"id":1,"name":"Especial"}
               ];
 
+
+
+
 exports.findAll = function (req, res, next) {
 	console.log('Find All Recipes');
+	
+	Recipe.find(function(err, recipes) {
+		if(err) return console.error(err);
+		res.send(recipes);
+	});
+	
 	/*mongoose.connection.db.collection('recipes', function (err, collection) {
 	    collection.find();
 	});*/
-    res.send(recipes);
+    //res.send(recipes);
+
 };
 
 exports.findById = function (req, res, next) {
