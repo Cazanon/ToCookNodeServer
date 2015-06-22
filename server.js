@@ -10,7 +10,7 @@ var express 		= require('express'),
 //http://stackoverflow.com/questions/28651028/cannot-find-module-build-release-bson-code-module-not-found-js-bson
 mongoose.connect('mongodb://tocook:ionictocook@ds049219.mongolab.com:49219/tocookdb');
 
-app.use(express.static('public'));
+app.use(express.static('/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride());      
